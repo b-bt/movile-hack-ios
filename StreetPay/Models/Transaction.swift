@@ -10,9 +10,10 @@ import Foundation
 
 class Transaction {
     var vendor: Vendor
-    var value: Double?
+    var value: Double
     
-    init(withVendor vendor: Vendor) {
+    init(withVendor vendor: Vendor, andValue value: Double) {
         self.vendor = vendor
+        self.value = value
     }
 }
