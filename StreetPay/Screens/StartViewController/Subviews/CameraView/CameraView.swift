@@ -14,7 +14,10 @@ class CameraView: UIView {
     // MARK: Camera Properties and Functions
     private var captureCameraSession = AVCaptureSession()
     private lazy var cameraLayer: AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.captureCameraSession)
-    
+    private let captureMetadataOutput = AVCaptureMetadataOutput()
+    private let videoDataOutputQueue = DispatchQueue(label: "VideoDataOutput",
+                                                     qos: .userInitiated,
+                                                     attributes: [], autoreleaseFrequency: .workItem)
     // Initializer:
     override init(frame: CGRect) {
         super.init(frame: frame)
