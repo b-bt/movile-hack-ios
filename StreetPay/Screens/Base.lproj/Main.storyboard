@@ -49,13 +49,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="João Carlos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amZ-5X-PWQ">
-                                                    <rect key="frame" x="64" y="22.5" width="88" height="19"/>
+                                                    <rect key="frame" x="64" y="22.5" width="86" height="19"/>
                                                     <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                                     <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$25,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pj-RK-HoF">
-                                                    <rect key="frame" x="335" y="22.5" width="63" height="19"/>
+                                                    <rect key="frame" x="338" y="22.5" width="60" height="19"/>
                                                     <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                                     <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Histórico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQH-h1-wCg">
-                                <rect key="frame" x="173.5" y="413" width="67" height="19"/>
+                                <rect key="frame" x="175" y="413" width="64" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                 <color key="textColor" red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -90,7 +90,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqr-jY-4Fc">
-                                        <rect key="frame" x="93" y="277.5" width="228" height="47.5"/>
+                                        <rect key="frame" x="93" y="277.5" width="228" height="70"/>
                                         <string key="text">Escaneie o QR code para
 realizar um pagamento</string>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="20"/>
@@ -153,7 +153,7 @@ realizar um pagamento</string>
                                     <constraint firstAttribute="height" constant="299" id="QrT-95-h3p"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qse-Vb-orJ" customClass="PinkButton" customModule="StreetPay" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qse-Vb-orJ" customClass="RectangleButton" customModule="StreetPay" customModuleProvider="target">
                                 <rect key="frame" x="24" y="768" width="366" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -179,12 +179,65 @@ realizar um pagamento</string>
                     </view>
                     <connections>
                         <outlet property="continueButton" destination="qse-Vb-orJ" id="mFd-be-0WC"/>
+                        <outlet property="payButton" destination="qse-Vb-orJ" id="86z-86-KNo"/>
                         <outlet property="transactionCard" destination="v6U-gC-eMN" id="Ot5-GK-vZV"/>
+                        <segue destination="TZN-B1-Gzl" kind="show" identifier="loadingSegue" id="CO0-bw-m6h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0iz-5j-clx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1823.1884057971015" y="132.58928571428572"/>
+        </scene>
+        <!--Confirmation View Controller-->
+        <scene sceneID="DbA-Yr-NZs">
+            <objects>
+                <viewController id="TZN-B1-Gzl" customClass="ConfirmationViewController" customModule="StreetPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jca-vI-hQg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEw-nW-WOA" customClass="RectangleButton" customModule="StreetPay" customModuleProvider="target">
+                                <rect key="frame" x="24" y="768" width="366" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="lKm-V4-VTE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Ok"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="disabledTitle" value="Ok"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isEnabled" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="alternateTintColor">
+                                        <color key="value" red="0.41960784313725491" green="0.41960784313725491" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="alternateBackgroundColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPZ-UM-AXE" customClass="LoadingCard" customModule="StreetPay" customModuleProvider="target">
+                                <rect key="frame" x="24" y="120" width="366" height="274"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="274" placeholder="YES" id="dWt-eE-7rn"/>
+                                    <constraint firstAttribute="width" constant="366" id="hzG-fL-gfW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qCm-i6-4cj" firstAttribute="trailing" secondItem="QEw-nW-WOA" secondAttribute="trailing" constant="24" id="BuU-6n-dnw"/>
+                            <constraint firstItem="QEw-nW-WOA" firstAttribute="leading" secondItem="qCm-i6-4cj" secondAttribute="leading" constant="24" id="FSw-jX-odF"/>
+                            <constraint firstItem="qCm-i6-4cj" firstAttribute="trailing" secondItem="KPZ-UM-AXE" secondAttribute="trailing" constant="24" id="FpQ-UX-KW8"/>
+                            <constraint firstItem="KPZ-UM-AXE" firstAttribute="leading" secondItem="qCm-i6-4cj" secondAttribute="leading" constant="24" id="cOC-6G-xHE"/>
+                            <constraint firstItem="KPZ-UM-AXE" firstAttribute="top" secondItem="qCm-i6-4cj" secondAttribute="top" constant="32" id="lad-yq-zbn"/>
+                            <constraint firstItem="qCm-i6-4cj" firstAttribute="bottom" secondItem="QEw-nW-WOA" secondAttribute="bottom" constant="24" id="yWt-LG-0uj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qCm-i6-4cj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RgQ-7k-8IH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2609" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9K5-D2-ea6">

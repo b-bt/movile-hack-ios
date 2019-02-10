@@ -11,7 +11,8 @@ import UIKit
 class TransactionViewController: UIViewController {
 
     @IBOutlet weak var transactionCard: TransactionCard!
-    @IBOutlet weak var continueButton: PinkButton!
+    @IBOutlet weak var continueButton: RectangleButton!
+    @IBOutlet weak var payButton: RectangleButton!
     
     var transactionAmount: Double?
     
@@ -20,6 +21,7 @@ class TransactionViewController: UIViewController {
 
         self.transactionCard.valueFld.delegate = self
         self.setupNavbar()
+        self.payButton.delegate = self
     }
     
     func setupNavbar() {
@@ -43,6 +45,10 @@ extension TransactionViewController: ValueTextFieldDelegate {
     func cleared() {
         self.continueButton.isEnabled = false
     }
-    
-    
+}
+
+extension TransactionViewController: RectangleButtonDelegate {
+    func buttonTouched() {
+        self.performSegue(withIdentifier: "loadingSegue", sender: self.transactionAmount)
+    }
 }
