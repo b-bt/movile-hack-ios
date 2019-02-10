@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Wr-mO-xGw">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -97,13 +97,6 @@ realizar um pagamento</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="OTb-i4-h9l">
-                                        <rect key="frame" x="191" y="36" width="32" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="2CZ-vq-jyd"/>
-                                            <constraint firstAttribute="width" constant="32" id="Bjo-Sd-bcD"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -113,7 +106,6 @@ realizar um pagamento</string>
                                     <constraint firstItem="Iqr-jY-4Fc" firstAttribute="top" secondItem="Uhr-Vc-vHe" secondAttribute="bottom" constant="16" id="Dth-0t-rDq"/>
                                     <constraint firstItem="Uhr-Vc-vHe" firstAttribute="centerY" secondItem="plI-cW-1bG" secondAttribute="centerY" id="M0o-JX-we9"/>
                                     <constraint firstAttribute="trailing" secondItem="Iqr-jY-4Fc" secondAttribute="trailing" constant="93" id="R7D-nz-Sgh"/>
-                                    <constraint firstItem="OTb-i4-h9l" firstAttribute="centerX" secondItem="plI-cW-1bG" secondAttribute="centerX" id="qyf-5P-rMj"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -125,7 +117,6 @@ realizar um pagamento</string>
                             <constraint firstItem="plI-cW-1bG" firstAttribute="centerX" secondItem="ACU-hH-9LE" secondAttribute="centerX" id="M0U-Jm-gRV"/>
                             <constraint firstAttribute="bottom" secondItem="2nS-aM-CMR" secondAttribute="bottom" id="Q8C-Pw-Cst"/>
                             <constraint firstItem="2nS-aM-CMR" firstAttribute="top" secondItem="cQH-h1-wCg" secondAttribute="bottom" constant="16" id="Scv-1I-6AL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="OTb-i4-h9l" secondAttribute="top" constant="8" id="YzT-Oh-LpO"/>
                             <constraint firstItem="cQH-h1-wCg" firstAttribute="top" secondItem="ACU-hH-9LE" secondAttribute="bottom" constant="16" id="ZFO-O8-Na2"/>
                             <constraint firstItem="ACU-hH-9LE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bBY-3F-eoU"/>
                             <constraint firstItem="ACU-hH-9LE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gu8-di-gqC"/>
@@ -155,7 +146,7 @@ realizar um pagamento</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6U-gC-eMN" customClass="TransactionCard" customModule="StreetPay" customModuleProvider="target">
-                                <rect key="frame" x="24" y="68" width="366" height="299"/>
+                                <rect key="frame" x="24" y="120" width="366" height="299"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="366" id="N8v-dm-ywQ"/>
@@ -178,11 +169,11 @@ realizar um pagamento</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qse-Vb-orJ" firstAttribute="leading" secondItem="V9k-8a-SGu" secondAttribute="leading" constant="24" id="Bbo-tJ-qEG"/>
+                            <constraint firstItem="v6U-gC-eMN" firstAttribute="top" secondItem="V9k-8a-SGu" secondAttribute="top" constant="32" id="GIE-nt-Vfo"/>
                             <constraint firstItem="V9k-8a-SGu" firstAttribute="trailing" secondItem="v6U-gC-eMN" secondAttribute="trailing" constant="24" id="RvP-dq-30x"/>
                             <constraint firstItem="V9k-8a-SGu" firstAttribute="trailing" secondItem="qse-Vb-orJ" secondAttribute="trailing" constant="24" id="e2A-bg-3IE"/>
                             <constraint firstItem="v6U-gC-eMN" firstAttribute="leading" secondItem="V9k-8a-SGu" secondAttribute="leading" constant="24" id="eUk-aM-CVd"/>
                             <constraint firstItem="V9k-8a-SGu" firstAttribute="bottom" secondItem="qse-Vb-orJ" secondAttribute="bottom" constant="24" id="oxc-Bt-D6J"/>
-                            <constraint firstItem="v6U-gC-eMN" firstAttribute="top" secondItem="V9k-8a-SGu" secondAttribute="top" constant="24" id="w1G-vb-jJ5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V9k-8a-SGu"/>
                     </view>
@@ -198,10 +189,12 @@ realizar um pagamento</string>
         <!--Navigation Controller-->
         <scene sceneID="9K5-D2-ea6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="9Wr-mO-xGw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Wr-mO-xGw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WtU-hB-wZR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -214,7 +207,6 @@ realizar um pagamento</string>
         </scene>
     </scenes>
     <resources>
-        <image name="logo-white" width="32" height="32"/>
         <image name="qr-scan-icon" width="72" height="126"/>
         <image name="vendor-1" width="46" height="46"/>
     </resources>

@@ -19,6 +19,17 @@ class TransactionViewController: UIViewController {
         super.viewDidLoad()
 
         self.transactionCard.valueFld.delegate = self
+        self.setupNavbar()
+    }
+    
+    func setupNavbar() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+        let logoImg = UIImageView(image: UIImage(named: "logo-color"))
+        logoImg.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = logoImg
     }
 
 }
