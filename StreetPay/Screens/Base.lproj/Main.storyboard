@@ -114,11 +114,21 @@
                                     <constraint firstAttribute="height" constant="299" id="QrT-95-h3p"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qse-Vb-orJ" customClass="PinkButton" customModule="StreetPay" customModuleProvider="target">
+                                <rect key="frame" x="24" y="768" width="366" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="c8d-9f-yGY"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="qse-Vb-orJ" firstAttribute="leading" secondItem="V9k-8a-SGu" secondAttribute="leading" constant="24" id="Bbo-tJ-qEG"/>
                             <constraint firstItem="V9k-8a-SGu" firstAttribute="trailing" secondItem="v6U-gC-eMN" secondAttribute="trailing" constant="24" id="RvP-dq-30x"/>
+                            <constraint firstItem="V9k-8a-SGu" firstAttribute="trailing" secondItem="qse-Vb-orJ" secondAttribute="trailing" constant="24" id="e2A-bg-3IE"/>
                             <constraint firstItem="v6U-gC-eMN" firstAttribute="leading" secondItem="V9k-8a-SGu" secondAttribute="leading" constant="24" id="eUk-aM-CVd"/>
+                            <constraint firstItem="V9k-8a-SGu" firstAttribute="bottom" secondItem="qse-Vb-orJ" secondAttribute="bottom" constant="24" id="oxc-Bt-D6J"/>
                             <constraint firstItem="v6U-gC-eMN" firstAttribute="top" secondItem="V9k-8a-SGu" secondAttribute="top" constant="24" id="w1G-vb-jJ5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V9k-8a-SGu"/>
