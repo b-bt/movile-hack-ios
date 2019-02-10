@@ -31,7 +31,7 @@ class TransactionsManager {
         self.transactionsList.append(transaction)
         
         let parameters = ["amount" : (value * 100)]
-        Alamofire.request("https://861b7c52.ngrok.io/payment", method: .post, parameters: parameters, encoding: JSONEncoding.default).response { (response) in
+        Alamofire.request("https://26806a8a.ngrok.io/payment", method: .post, parameters: parameters, encoding: JSONEncoding.default).response { (response) in
             guard let completion = completion else { return }
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 completion(transaction)
