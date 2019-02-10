@@ -31,13 +31,21 @@ class CameraView: UIView {
         self.commonInit()
     }
     
-    func commonInit() {
+    private func commonInit() {
         self.setupAVCapture(session: captureCameraSession,
                             cameraLayer: cameraLayer,
                             captureMetadataOutput: captureMetadataOutput,
                             videoDataOutputQueue: videoDataOutputQueue,
                             outputDelegate: self)
+        self.startCapture()
+    }
+    
+    func startCapture() {
         self.startCapturing(self.captureCameraSession)
+    }
+    
+    func stopCapture() {
+        self.stopCapturing(self.captureCameraSession)
     }
 }
 
@@ -60,7 +68,7 @@ extension CameraView: AVCaptureMetadataOutputObjectsDelegate {
                 return
             }
             self.delegate?.detected(code: stringValue)
-            self.stopCapturing(self.captureCameraSession)
+            self.stopCapture()
         }
     }
 }
