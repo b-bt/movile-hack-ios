@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Light.ttf">
+            <string>Rubik-Light</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionCard" customModule="StreetPay" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESo-fe-26G">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vendor-1" translatesAutoresizingMaskIntoConstraints="NO" id="pCs-b4-kA7">
+                    <rect key="frame" x="24" y="24" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="WhG-Zz-ITd"/>
+                        <constraint firstAttribute="width" constant="46" id="xvO-vZ-O40"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quanto você quer pagar para Jon Carlos?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ild-pR-mub">
+                    <rect key="frame" x="24" y="78" width="327" height="47.5"/>
+                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="20"/>
+                    <color key="textColor" red="0.41960784309999999" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Yo-Fo-V2l">
+                    <rect key="frame" x="24" y="141.5" width="327" height="45"/>
+                    <color key="textColor" red="1" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="34"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pM6-pg-RNZ">
+                    <rect key="frame" x="0.0" y="210.5" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="INI-iT-Xqw"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mastercard-icon" translatesAutoresizingMaskIntoConstraints="NO" id="QdH-cw-gzu">
+                    <rect key="frame" x="16" y="254.5" width="44" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="Bkh-Lx-nwb"/>
+                        <constraint firstAttribute="width" constant="44" id="LMD-OE-w2C"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mastercard **** 5678" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oax-0m-054">
+                    <rect key="frame" x="68" y="261" width="157" height="19"/>
+                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                    <color key="textColor" red="0.6705882353" green="0.6705882353" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxb-RI-OS9">
+                    <rect key="frame" x="315" y="261" width="44" height="19"/>
+                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                    <color key="textColor" red="0.41960784309999999" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forma de pagamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="by7-fE-ztG">
+                    <rect key="frame" x="16" y="227.5" width="343" height="19"/>
+                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                    <color key="textColor" red="0.41960784309999999" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Ild-pR-mub" firstAttribute="top" secondItem="pCs-b4-kA7" secondAttribute="bottom" constant="8" id="7iG-Z1-2SF"/>
+                <constraint firstAttribute="trailing" secondItem="9Yo-Fo-V2l" secondAttribute="trailing" constant="24" id="8N5-Is-Xq8"/>
+                <constraint firstItem="pM6-pg-RNZ" firstAttribute="leading" secondItem="ESo-fe-26G" secondAttribute="leading" id="9iQ-2N-IZm"/>
+                <constraint firstItem="Mxb-RI-OS9" firstAttribute="centerY" secondItem="oax-0m-054" secondAttribute="centerY" id="9xg-p2-AM1"/>
+                <constraint firstItem="QdH-cw-gzu" firstAttribute="top" secondItem="by7-fE-ztG" secondAttribute="bottom" constant="8" id="Blm-iU-p5r"/>
+                <constraint firstItem="9Yo-Fo-V2l" firstAttribute="leading" secondItem="ESo-fe-26G" secondAttribute="leading" constant="24" id="DL8-Gi-nKb"/>
+                <constraint firstAttribute="trailing" secondItem="by7-fE-ztG" secondAttribute="trailing" constant="16" id="Fiz-Vs-XG6"/>
+                <constraint firstItem="oax-0m-054" firstAttribute="leading" secondItem="QdH-cw-gzu" secondAttribute="trailing" constant="8" id="HHU-Fi-4oP"/>
+                <constraint firstAttribute="trailing" secondItem="Ild-pR-mub" secondAttribute="trailing" constant="24" id="J0o-34-V9K"/>
+                <constraint firstItem="by7-fE-ztG" firstAttribute="leading" secondItem="ESo-fe-26G" secondAttribute="leading" constant="16" id="LNH-ri-8BO"/>
+                <constraint firstItem="oax-0m-054" firstAttribute="centerY" secondItem="QdH-cw-gzu" secondAttribute="centerY" id="Lv5-Pn-Fxh"/>
+                <constraint firstItem="Ild-pR-mub" firstAttribute="leading" secondItem="ESo-fe-26G" secondAttribute="leading" constant="24" id="Pjd-4w-LCP"/>
+                <constraint firstItem="pM6-pg-RNZ" firstAttribute="top" secondItem="9Yo-Fo-V2l" secondAttribute="bottom" constant="24" id="Tov-cz-gTT"/>
+                <constraint firstAttribute="trailing" secondItem="pM6-pg-RNZ" secondAttribute="trailing" id="XRE-Pk-Y00"/>
+                <constraint firstItem="9Yo-Fo-V2l" firstAttribute="top" secondItem="Ild-pR-mub" secondAttribute="bottom" constant="16" id="hX9-iC-PNn"/>
+                <constraint firstItem="pCs-b4-kA7" firstAttribute="top" secondItem="ESo-fe-26G" secondAttribute="top" constant="24" id="lxx-WB-5WQ"/>
+                <constraint firstItem="by7-fE-ztG" firstAttribute="top" secondItem="pM6-pg-RNZ" secondAttribute="bottom" constant="16" id="pTs-FJ-oLW"/>
+                <constraint firstItem="QdH-cw-gzu" firstAttribute="leading" secondItem="ESo-fe-26G" secondAttribute="leading" constant="16" id="qgm-gf-py3"/>
+                <constraint firstItem="pCs-b4-kA7" firstAttribute="leading" secondItem="ESo-fe-26G" secondAttribute="leading" constant="24" id="qhK-dB-IUI"/>
+                <constraint firstAttribute="trailing" secondItem="Mxb-RI-OS9" secondAttribute="trailing" constant="16" id="xiU-Gg-kmr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="bZC-vD-TXY"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mastercard-icon" width="44" height="32"/>
+        <image name="vendor-1" width="46" height="46"/>
+    </resources>
+</document>
