@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class PinkButton: UIView {
+@IBDesignable class RectangleButton: UIView {
 
     @IBInspectable var title: String? {
         didSet {
@@ -39,6 +39,22 @@ import UIKit
             }
         }
     }
+    @IBInspectable var alternateTintColor: UIColor? {
+        didSet {
+            if let tintColor = alternateTintColor {
+                self.contentView.setTitleColor(tintColor, for: .normal)
+            }
+        }
+    }
+    @IBInspectable var alternateBackgroundColor: UIColor? {
+        didSet {
+            if let bgColor = alternateBackgroundColor {
+                self.backgroundColor = bgColor
+            }
+        }
+    }
+    
+    var delegate: RectangleButtonDelegate?
     
     fileprivate var contentView: UIButton!
     fileprivate var shadowView: UIView!
@@ -71,6 +87,8 @@ import UIKit
         self.contentView.layer.masksToBounds = true
         
         self.setNeedsLayout()
+        
+        self.contentView.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
     }
     
     private func createShadow() {
@@ -87,4 +105,7 @@ import UIKit
         self.shadowView.translatesAutoresizingMaskIntoConstraints = false
     }
 
+    @objc func buttonTouched() {
+        self.delegate?.buttonTouched()
+    }
 }
