@@ -22,6 +22,8 @@ class TransactionViewController: UIViewController {
         self.transactionCard.valueFld.delegate = self
         self.setupNavbar()
         self.payButton.delegate = self
+        
+        self.transactionCard.valueFld.activate()
     }
     
     func setupNavbar() {

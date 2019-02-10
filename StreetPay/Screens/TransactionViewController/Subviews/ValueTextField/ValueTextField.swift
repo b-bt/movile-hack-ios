@@ -32,6 +32,10 @@ class ValueTextField: UIView {
         self.contentView = self.loadViewFromNib()
         self.addSubview(self.contentView)
     }
+    
+    func activate() {
+        self.field.becomeFirstResponder()
+    }
 
 }
 

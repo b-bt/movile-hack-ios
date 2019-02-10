@@ -158,8 +158,8 @@ realizar um pagamento</string>
                                     <constraint firstAttribute="height" constant="299" id="QrT-95-h3p"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qse-Vb-orJ" customClass="RectangleButton" customModule="StreetPay" customModuleProvider="target">
-                                <rect key="frame" x="24" y="768" width="366" height="70"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qse-Vb-orJ" customClass="RectangleButton" customModule="StreetPay" customModuleProvider="target">
+                                <rect key="frame" x="24" y="459" width="366" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="c8d-9f-yGY"/>
@@ -178,6 +178,7 @@ realizar um pagamento</string>
                             <constraint firstItem="V9k-8a-SGu" firstAttribute="trailing" secondItem="v6U-gC-eMN" secondAttribute="trailing" constant="24" id="RvP-dq-30x"/>
                             <constraint firstItem="V9k-8a-SGu" firstAttribute="trailing" secondItem="qse-Vb-orJ" secondAttribute="trailing" constant="24" id="e2A-bg-3IE"/>
                             <constraint firstItem="v6U-gC-eMN" firstAttribute="leading" secondItem="V9k-8a-SGu" secondAttribute="leading" constant="24" id="eUk-aM-CVd"/>
+                            <constraint firstItem="qse-Vb-orJ" firstAttribute="top" secondItem="v6U-gC-eMN" secondAttribute="bottom" constant="40" id="yRW-uD-tgP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V9k-8a-SGu"/>
                     </view>
