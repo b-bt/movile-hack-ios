@@ -21,6 +21,7 @@ class ConfirmationViewController: UIViewController {
                     } else {
                         self.view.backgroundColor = UIColor(red:0.28, green:0.89, blue:0.76, alpha:1.00)
                     }
+                    self.setupNavbar()
                 })
             }
         }
@@ -31,6 +32,7 @@ class ConfirmationViewController: UIViewController {
 
         self.setupNavbar()
         self.isLoading = true
+        self.navigationItem.hidesBackButton = true
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.isLoading = false
