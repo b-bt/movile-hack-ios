@@ -34,6 +34,10 @@ extension TransactionsTableView: UITableViewDelegate {
 }
 
 extension TransactionsTableView: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 66
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TODO: return real number of tables
         return 5
@@ -41,7 +45,7 @@ extension TransactionsTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.transactionCellIdentifier) as! TransactionCell
-        // TODO: return populated cell
+        cell.darkBackground = (indexPath.row % 2) == 0
         return cell
     }
     
