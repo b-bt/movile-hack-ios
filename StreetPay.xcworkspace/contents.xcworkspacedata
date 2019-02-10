@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:StreetPay.xcodeproj">
+      location = "group:/Users/tbbruno/Developer/iOS/movile-hack-ios/JonPay.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
