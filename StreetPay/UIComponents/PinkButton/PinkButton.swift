@@ -10,7 +10,37 @@ import UIKit
 
 @IBDesignable class PinkButton: UIView {
 
-    fileprivate var contentView: UIView!
+    @IBInspectable var title: String? {
+        didSet {
+            if let title = title {
+                self.contentView.setTitle(title, for: .normal)
+            }
+        }
+    }
+    @IBInspectable var disabledTitle: String? {
+        didSet {
+            if let disabledTitle = disabledTitle {
+                self.contentView.setTitle(disabledTitle, for: .disabled)
+            }
+        }
+    }
+    @IBInspectable var isEnabled: Bool = true {
+        didSet {
+            self.contentView.isEnabled = self.isEnabled
+            if isEnabled {
+                self.contentView.backgroundColor = UIColor(red:1.00, green:0.25, blue:0.46, alpha:1.00)
+                self.contentView.tintColor = UIColor.white
+                self.contentView.layer.borderWidth = 0
+            } else {
+                self.contentView.backgroundColor = UIColor.white
+                self.contentView.tintColor = UIColor(red:0.90, green:0.90, blue:0.90, alpha:1.00)
+                self.contentView.layer.borderColor = UIColor(red:0.90, green:0.90, blue:0.90, alpha:1.00).cgColor
+                self.contentView.layer.borderWidth = 1.0
+            }
+        }
+    }
+    
+    fileprivate var contentView: UIButton!
     fileprivate var shadowView: UIView!
     
     override init(frame: CGRect) {
@@ -28,7 +58,7 @@ import UIKit
         self.createShadow()
         
         self.clipsToBounds = false
-        self.contentView = self.loadViewFromNib()
+        self.contentView = self.loadViewFromNib() as! UIButton
         self.shadowView.addSubview(self.contentView)
         
         let heightConstraint = NSLayoutConstraint(item: self.contentView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 1, constant: 0)

@@ -24,6 +24,9 @@
             <state key="normal" title="Button">
                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             </state>
+            <state key="disabled">
+                <color key="titleColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+            </state>
             <point key="canvasLocation" x="141" y="31"/>
         </button>
     </objects>
