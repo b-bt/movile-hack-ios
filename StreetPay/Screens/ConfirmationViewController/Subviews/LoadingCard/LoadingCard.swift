@@ -13,6 +13,34 @@ class LoadingCard: UIView {
     fileprivate var contentView: UIView!
     fileprivate var shadowView: UIView!
     
+    @IBOutlet weak var loadingBgImg: UIImageView!
+    @IBOutlet var loadingConstraint: NSLayoutConstraint!
+    @IBOutlet var allInfoConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var amountLbl: UILabel!
+    
+    var isLoading: Bool = true {
+        didSet {
+            UIView.animate(withDuration: 0.2) {
+                // TODO: animate
+                self.loadingConstraint.isActive = self.isLoading
+                self.allInfoConstraint.isActive = !self.isLoading
+                
+                self.amountLbl.isHidden = self.isLoading
+                
+                let imageName = self.isLoading ? "loading-circle-icon" : "success-circle-icon"
+                self.loadingBgImg.image = UIImage(named: imageName)!
+                
+                if self.isLoading {
+                    self.activityIndicator.startAnimating()
+                } else {
+                    self.activityIndicator.stopAnimating()
+                }
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()

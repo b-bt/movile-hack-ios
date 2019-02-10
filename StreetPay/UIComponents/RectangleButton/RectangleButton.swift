@@ -49,7 +49,7 @@ import UIKit
     @IBInspectable var alternateBackgroundColor: UIColor? {
         didSet {
             if let bgColor = alternateBackgroundColor {
-                self.backgroundColor = bgColor
+                self.contentView.backgroundColor = bgColor
             }
         }
     }

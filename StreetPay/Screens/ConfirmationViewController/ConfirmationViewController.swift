@@ -10,12 +10,31 @@ import UIKit
 
 class ConfirmationViewController: UIViewController {
     
-    var isLoading: Bool = true
+    @IBOutlet weak var loadingCard: LoadingCard!
+    var isLoading: Bool = true {
+        didSet {
+            self.loadingCard.isLoading = self.isLoading
+            DispatchQueue.main.async {
+                UIView.animate(withDuration: 0.2, animations: {
+                    if self.isLoading {
+                        self.view.backgroundColor = UIColor.white
+                    } else {
+                        self.view.backgroundColor = UIColor(red:0.28, green:0.89, blue:0.76, alpha:1.00)
+                    }
+                })
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.setupNavbar()
+        self.isLoading = true
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.isLoading = false
+        }
     }
     
     func setupNavbar() {
