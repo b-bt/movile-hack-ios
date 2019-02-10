@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StreetPay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="StreetPay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,17 +138,18 @@ realizar um pagamento</string>
                     </view>
                     <navigationItem key="navigationItem" id="V7N-6v-AEu"/>
                     <connections>
-                        <segue destination="RCn-dM-WAH" kind="show" id="caU-b5-OIq"/>
+                        <outlet property="cameraView" destination="ACU-hH-9LE" id="z32-RK-rej"/>
+                        <segue destination="RCn-dM-WAH" kind="show" identifier="transactionSegue" id="caU-b5-OIq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1046.376811594203" y="133.25892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Transaction View Controller-->
         <scene sceneID="aqB-1G-E4o">
             <objects>
-                <viewController id="RCn-dM-WAH" sceneMemberID="viewController">
+                <viewController id="RCn-dM-WAH" customClass="TransactionViewController" customModule="StreetPay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f3E-kE-GP4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

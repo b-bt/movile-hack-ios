@@ -10,11 +10,18 @@ import UIKit
 
 class StartViewController: UIViewController {
 
+    @IBOutlet weak var cameraView: CameraView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        cameraView.delegate = self
     }
     
+}
 
+extension StartViewController: CameraViewDelegate {
+    func detected(code: String) {
+        self.performSegue(withIdentifier: "transactionSegue", sender: code)
+    }
 }

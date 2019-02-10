@@ -11,6 +11,8 @@ import AVFoundation
 
 class CameraView: UIView {
 
+    var delegate: CameraViewDelegate?
+    
     // MARK: Camera Properties and Functions
     private var captureCameraSession = AVCaptureSession()
     private lazy var cameraLayer: AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.captureCameraSession)
@@ -54,6 +56,10 @@ extension CameraView: AVCaptureMetadataOutputObjectsDelegate {
             // TODO: Check if valid vendor and call delegate method to display it
             print("QRCode: \(metadataObj.stringValue)")
             
+            guard let stringValue = metadataObj.stringValue else {
+                return
+            }
+            self.delegate?.detected(code: stringValue)
             self.stopCapturing(self.captureCameraSession)
         }
     }
