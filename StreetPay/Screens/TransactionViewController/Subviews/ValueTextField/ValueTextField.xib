@@ -15,7 +15,12 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ValueTextField" customModule="StreetPay" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ValueTextField" customModule="StreetPay" customModuleProvider="target">
+            <connections>
+                <outlet property="field" destination="7UD-mv-FTt" id="x3o-hv-pI5"/>
+                <outlet property="listener" destination="BIc-GX-WHi" id="r9k-JB-JBh"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="318" height="43"/>
@@ -42,6 +47,9 @@
                     <color key="textColor" red="1" green="0.26666666666666666" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="32"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="BIc-GX-WHi" id="svs-pl-ToP"/>
+                    </connections>
                 </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,5 +68,13 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.59999999999999" y="109.29535232383809"/>
         </view>
+        <customObject id="BIc-GX-WHi" customClass="MaskedTextFieldDelegate" customModule="InputMask">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="primaryMaskFormat" value="[99],[00]"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="delegate" destination="-1" id="9qH-o3-GNB"/>
+            </connections>
+        </customObject>
     </objects>
 </document>

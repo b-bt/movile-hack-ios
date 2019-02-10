@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import InputMask
 
 class ValueTextField: UIView {
 
     fileprivate var contentView: UIView!
+    
+    @IBOutlet var listener: MaskedTextFieldDelegate!
+    @IBOutlet weak var field: UITextField!
+    
+    var delegate: ValueTextFieldDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,4 +33,23 @@ class ValueTextField: UIView {
         self.addSubview(self.contentView)
     }
 
+}
+
+extension ValueTextField: MaskedTextFieldDelegateListener {
+    open func textField(_ textField: UITextField, didFillMandatoryCharacters complete: Bool, didExtractValue value: String) {
+        guard complete else {
+            self.delegate?.cleared()
+            return
+        }
+        guard var inputValue: String = textField.text else {
+            return
+        }
+        inputValue = inputValue.replacingOccurrences(of: ",", with: ".")
+        
+        guard let doubleValue = Double(inputValue) else {
+            return
+        }
+        self.delegate?.filled(value: doubleValue)
+        print(value)
+    }
 }

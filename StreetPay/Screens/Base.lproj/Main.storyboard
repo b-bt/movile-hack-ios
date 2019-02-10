@@ -186,6 +186,10 @@ realizar um pagamento</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V9k-8a-SGu"/>
                     </view>
+                    <connections>
+                        <outlet property="continueButton" destination="qse-Vb-orJ" id="mFd-be-0WC"/>
+                        <outlet property="transactionCard" destination="v6U-gC-eMN" id="Ot5-GK-vZV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0iz-5j-clx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

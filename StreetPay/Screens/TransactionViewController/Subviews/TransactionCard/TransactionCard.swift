@@ -10,6 +10,7 @@ import UIKit
 
 @IBDesignable class TransactionCard: UIView {
 
+    @IBOutlet weak var valueFld: ValueTextField!
     fileprivate var contentView: UIView!
     fileprivate var shadowView: UIView!
 

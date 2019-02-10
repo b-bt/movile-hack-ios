@@ -15,7 +15,11 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionCard" customModule="StreetPay" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionCard" customModule="StreetPay" customModuleProvider="target">
+            <connections>
+                <outlet property="valueFld" destination="UVL-Rp-Sd5" id="dM1-3O-6Y1"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESo-fe-26G">
             <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
