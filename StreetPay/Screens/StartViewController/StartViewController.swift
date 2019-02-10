@@ -12,11 +12,16 @@ class StartViewController: UIViewController {
 
     @IBOutlet weak var cameraView: CameraView!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         cameraView.delegate = self
         self.setupNavbar()
+        setNeedsStatusBarAppearanceUpdate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
