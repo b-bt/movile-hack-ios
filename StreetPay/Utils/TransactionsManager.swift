@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class TransactionsManager {
     private init() {}
@@ -29,9 +30,12 @@ class TransactionsManager {
         let transaction = Transaction(withVendor: self.currentVendor, andValue: value)
         self.transactionsList.append(transaction)
         
-        guard let completion = completion else { return }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            completion(transaction)
+        let parameters = ["amount" : (value * 100)]
+        Alamofire.request("https://861b7c52.ngrok.io/payment", method: .post, parameters: parameters, encoding: JSONEncoding.default).response { (response) in
+            guard let completion = completion else { return }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                completion(transaction)
+            }
         }
     }
 }

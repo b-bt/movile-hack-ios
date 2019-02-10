@@ -9,6 +9,6 @@ target 'JonPay' do
 
   pod 'IQKeyboardManagerSwift'
   pod 'InputMask'
-  pod 'Alamofire', '~> 5.0.0-beta.2'
+  pod 'Alamofire'
 
 end

@@ -1,18 +1,18 @@
 PODS:
-  - Alamofire (5.0.0-beta.2)
+  - Alamofire (4.8.1)
   - InputMask (4.1.0)
   - IQKeyboardManagerSwift (6.2.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 5.0.0-beta.2)
+  - Alamofire
   - InputMask
   - IQKeyboardManagerSwift
 
 SPEC CHECKSUMS:
-  Alamofire: d1e5493588babe3e7b56ae29e8032942f4de09fe
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   InputMask: 603cef8ae05f28e903b852c704350c9d73baf47f
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
 
-PODFILE CHECKSUM: 52bedfdd9de9108e9614bce23eba797aeca23543
+PODFILE CHECKSUM: 50fa8fb6315e55410ad189835ebad52c070b2408
 
 COCOAPODS: 1.4.0
