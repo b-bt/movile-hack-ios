@@ -10,6 +10,10 @@ import UIKit
 
 class TransactionCell: UITableViewCell {
 
+    @IBOutlet weak var vendorImg: UIImageView!
+    @IBOutlet weak var vendorNameLbl: UILabel!
+    @IBOutlet weak var transactionAmounLbl: UILabel!
+    
     var darkBackground: Bool = false {
         didSet {
             if darkBackground {
@@ -20,15 +24,12 @@ class TransactionCell: UITableViewCell {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func config(withTransaction transaction: Transaction) {
+        let vendor = transaction.vendor
+        
+        self.vendorImg.image = vendor.photo
+        self.vendorNameLbl.text = vendor.name
+        self.transactionAmounLbl.text = String(format: "%.02f", transaction.value)
     }
 
 }

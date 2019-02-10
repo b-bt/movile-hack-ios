@@ -51,7 +51,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="João Carlos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amZ-5X-PWQ">
                                                     <rect key="frame" x="64" y="22.5" width="88" height="19"/>
                                                     <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
-                                                    <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$25,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pj-RK-HoF">
@@ -70,13 +70,18 @@
                                                 <constraint firstAttribute="trailing" secondItem="7Pj-RK-HoF" secondAttribute="trailing" constant="16" id="pKw-Es-wHH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="transactionAmounLbl" destination="7Pj-RK-HoF" id="PPH-6O-pcb"/>
+                                            <outlet property="vendorImg" destination="duQ-1Z-EYW" id="WvL-U2-cfZ"/>
+                                            <outlet property="vendorNameLbl" destination="amZ-5X-PWQ" id="Xb1-g1-NVe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Histórico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQH-h1-wCg">
                                 <rect key="frame" x="173.5" y="413" width="67" height="19"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
-                                <color key="textColor" red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plI-cW-1bG" userLabel="OverlayView">
@@ -153,7 +158,7 @@ realizar um pagamento</string>
                                     <constraint firstAttribute="height" constant="299" id="QrT-95-h3p"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qse-Vb-orJ" customClass="RectangleButton" customModule="StreetPay" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qse-Vb-orJ" customClass="RectangleButton" customModule="StreetPay" customModuleProvider="target">
                                 <rect key="frame" x="24" y="768" width="366" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -173,7 +178,6 @@ realizar um pagamento</string>
                             <constraint firstItem="V9k-8a-SGu" firstAttribute="trailing" secondItem="v6U-gC-eMN" secondAttribute="trailing" constant="24" id="RvP-dq-30x"/>
                             <constraint firstItem="V9k-8a-SGu" firstAttribute="trailing" secondItem="qse-Vb-orJ" secondAttribute="trailing" constant="24" id="e2A-bg-3IE"/>
                             <constraint firstItem="v6U-gC-eMN" firstAttribute="leading" secondItem="V9k-8a-SGu" secondAttribute="leading" constant="24" id="eUk-aM-CVd"/>
-                            <constraint firstItem="V9k-8a-SGu" firstAttribute="bottom" secondItem="qse-Vb-orJ" secondAttribute="bottom" constant="24" id="oxc-Bt-D6J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V9k-8a-SGu"/>
                     </view>
@@ -265,6 +269,6 @@ realizar um pagamento</string>
     </scenes>
     <resources>
         <image name="qr-scan-icon" width="72" height="126"/>
-        <image name="vendor-1" width="46" height="46"/>
+        <image name="vendor-1" width="32" height="32"/>
     </resources>
 </document>

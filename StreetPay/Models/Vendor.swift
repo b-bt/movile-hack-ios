@@ -12,8 +12,8 @@ class Vendor {
     var name: String
     var photo: UIImage
     
-    init(withName name: String, andPhoto photo: UIImage) {
+    init(withName name: String, andPhoto photoName: String) {
         self.name = name
-        self.photo = photo
+        self.photo = UIImage(named: photoName)!
     }
 }

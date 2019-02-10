@@ -40,11 +40,14 @@ extension TransactionsTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TODO: return real number of tables
-        return 5
+        return TransactionsManager.shared.transactionsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let transaction = TransactionsManager.shared.transactionsList[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: self.transactionCellIdentifier) as! TransactionCell
+        cell.config(withTransaction: transaction)
         cell.darkBackground = (indexPath.row % 2) == 0
         return cell
     }
