@@ -46,7 +46,7 @@
                     <rect key="frame" x="42" y="0.0" width="275" height="38"/>
                     <color key="textColor" red="1" green="0.26666666666666666" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="32"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                     <connections>
                         <outlet property="delegate" destination="BIc-GX-WHi" id="svs-pl-ToP"/>
                     </connections>
