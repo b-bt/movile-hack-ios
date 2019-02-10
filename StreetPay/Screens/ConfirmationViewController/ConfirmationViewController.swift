@@ -10,12 +10,15 @@ import UIKit
 
 class ConfirmationViewController: UIViewController {
     
+    @IBOutlet weak var continueBtn: RectangleButton!
     @IBOutlet weak var loadingCard: LoadingCard!
+    
     var isLoading: Bool = true {
         didSet {
             self.loadingCard.isLoading = self.isLoading
             DispatchQueue.main.async {
                 UIView.animate(withDuration: 0.2, animations: {
+                    self.continueBtn.isHidden = self.isLoading
                     if self.isLoading {
                         self.view.backgroundColor = UIColor.white
                     } else {
@@ -34,6 +37,8 @@ class ConfirmationViewController: UIViewController {
         self.isLoading = true
         self.navigationItem.hidesBackButton = true
         
+        self.continueBtn.delegate = self
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.isLoading = false
         }
@@ -50,4 +55,10 @@ class ConfirmationViewController: UIViewController {
         self.navigationItem.titleView = logoImg
     }
 
+}
+
+extension ConfirmationViewController: RectangleButtonDelegate {
+    func buttonTouched() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }

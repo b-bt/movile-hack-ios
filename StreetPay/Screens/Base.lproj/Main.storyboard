@@ -49,13 +49,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="João Carlos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amZ-5X-PWQ">
-                                                    <rect key="frame" x="64" y="22.5" width="86" height="19"/>
+                                                    <rect key="frame" x="64" y="22.5" width="88" height="19"/>
                                                     <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                                     <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$25,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pj-RK-HoF">
-                                                    <rect key="frame" x="338" y="22.5" width="60" height="19"/>
+                                                    <rect key="frame" x="335" y="22.5" width="63" height="19"/>
                                                     <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                                     <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -196,7 +196,7 @@ realizar um pagamento</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEw-nW-WOA" customClass="RectangleButton" customModule="StreetPay" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEw-nW-WOA" customClass="RectangleButton" customModule="StreetPay" customModuleProvider="target">
                                 <rect key="frame" x="24" y="768" width="366" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -205,7 +205,7 @@ realizar um pagamento</string>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Ok"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="disabledTitle" value="Ok"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isEnabled" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isEnabled" value="YES"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="alternateTintColor">
                                         <color key="value" red="0.41960784313725491" green="0.41960784313725491" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
@@ -235,6 +235,7 @@ realizar um pagamento</string>
                         <viewLayoutGuide key="safeArea" id="qCm-i6-4cj"/>
                     </view>
                     <connections>
+                        <outlet property="continueBtn" destination="QEw-nW-WOA" id="614-18-2SH"/>
                         <outlet property="loadingCard" destination="KPZ-UM-AXE" id="xl6-OO-KEI"/>
                     </connections>
                 </viewController>
