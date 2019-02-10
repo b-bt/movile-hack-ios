@@ -8,5 +8,6 @@ target 'StreetPay' do
   # Pods for StreetPay
 
   pod 'IQKeyboardManagerSwift'
+  pod 'InputMask'
 
 end
