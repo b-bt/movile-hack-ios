@@ -168,6 +168,11 @@ realizar um pagamento</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="c8d-9f-yGY"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Pagar"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="disabledTitle" value="Digite o valor"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isEnabled" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

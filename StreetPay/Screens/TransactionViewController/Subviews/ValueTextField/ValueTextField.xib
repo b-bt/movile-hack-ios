@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Light.ttf">
+            <string>Rubik-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ValueTextField" customModule="StreetPay" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="318" height="43"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEF-kR-waZ">
+                    <rect key="frame" x="0.0" y="42" width="318" height="1"/>
+                    <color key="backgroundColor" red="1" green="0.13725490196078433" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="9eH-6J-gTa"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH9-ru-oIR">
+                    <rect key="frame" x="1" y="0.0" width="40" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Zqd-yC-Y0A"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="32"/>
+                    <color key="textColor" red="1" green="0.26666666666666666" blue="0.46274509803921571" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0,00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7UD-mv-FTt">
+                    <rect key="frame" x="42" y="0.0" width="275" height="38"/>
+                    <color key="textColor" red="1" green="0.26666666666666666" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="32"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gEF-kR-waZ" firstAttribute="top" secondItem="CH9-ru-oIR" secondAttribute="bottom" constant="4" id="6ZT-XZ-006"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gEF-kR-waZ" secondAttribute="bottom" id="9md-Ze-0m1"/>
+                <constraint firstItem="CH9-ru-oIR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="1" id="LfY-Vp-meA"/>
+                <constraint firstItem="gEF-kR-waZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="P9q-gO-AmT"/>
+                <constraint firstItem="7UD-mv-FTt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="QuD-pj-yg2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7UD-mv-FTt" secondAttribute="trailing" constant="1" id="WLx-aN-Gi2"/>
+                <constraint firstItem="gEF-kR-waZ" firstAttribute="top" secondItem="7UD-mv-FTt" secondAttribute="bottom" constant="4" id="YvI-h5-Mvj"/>
+                <constraint firstItem="7UD-mv-FTt" firstAttribute="leading" secondItem="CH9-ru-oIR" secondAttribute="trailing" constant="1" id="eQ8-Wa-wiH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gEF-kR-waZ" secondAttribute="trailing" id="zhg-qo-TKm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.59999999999999" y="109.29535232383809"/>
+        </view>
+    </objects>
+</document>

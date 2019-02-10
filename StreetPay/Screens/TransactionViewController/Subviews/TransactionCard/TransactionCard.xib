@@ -10,9 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Rubik-Light.ttf">
-            <string>Rubik-Light</string>
-        </array>
         <array key="Rubik-Regular.ttf">
             <string>Rubik-Regular</string>
         </array>
@@ -36,12 +33,6 @@
                     <color key="textColor" red="0.41960784309999999" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Yo-Fo-V2l">
-                    <rect key="frame" x="24" y="141.5" width="327" height="45"/>
-                    <color key="textColor" red="1" green="0.2666666667" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="34"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pM6-pg-RNZ">
                     <rect key="frame" x="0.0" y="210.5" width="375" height="1"/>
                     <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -74,32 +65,40 @@
                     <color key="textColor" red="0.41960784309999999" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVL-Rp-Sd5" customClass="ValueTextField" customModule="StreetPay" customModuleProvider="target">
+                    <rect key="frame" x="24" y="141.5" width="327" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="JyL-dw-Ka7"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Ild-pR-mub" firstAttribute="top" secondItem="pCs-b4-kA7" secondAttribute="bottom" constant="8" id="7iG-Z1-2SF"/>
-                <constraint firstAttribute="trailing" secondItem="9Yo-Fo-V2l" secondAttribute="trailing" constant="24" id="8N5-Is-Xq8"/>
+                <constraint firstItem="bZC-vD-TXY" firstAttribute="trailing" secondItem="UVL-Rp-Sd5" secondAttribute="trailing" constant="24" id="9cI-gJ-zM2"/>
                 <constraint firstItem="pM6-pg-RNZ" firstAttribute="leading" secondItem="ESo-fe-26G" secondAttribute="leading" id="9iQ-2N-IZm"/>
                 <constraint firstItem="Mxb-RI-OS9" firstAttribute="centerY" secondItem="oax-0m-054" secondAttribute="centerY" id="9xg-p2-AM1"/>
+                <constraint firstItem="UVL-Rp-Sd5" firstAttribute="top" secondItem="Ild-pR-mub" secondAttribute="bottom" constant="16" id="BPo-rf-SrM"/>
                 <constraint firstItem="QdH-cw-gzu" firstAttribute="top" secondItem="by7-fE-ztG" secondAttribute="bottom" constant="8" id="Blm-iU-p5r"/>
-                <constraint firstItem="9Yo-Fo-V2l" firstAttribute="leading" secondItem="ESo-fe-26G" secondAttribute="leading" constant="24" id="DL8-Gi-nKb"/>
                 <constraint firstAttribute="trailing" secondItem="by7-fE-ztG" secondAttribute="trailing" constant="16" id="Fiz-Vs-XG6"/>
                 <constraint firstItem="oax-0m-054" firstAttribute="leading" secondItem="QdH-cw-gzu" secondAttribute="trailing" constant="8" id="HHU-Fi-4oP"/>
                 <constraint firstAttribute="trailing" secondItem="Ild-pR-mub" secondAttribute="trailing" constant="24" id="J0o-34-V9K"/>
                 <constraint firstItem="by7-fE-ztG" firstAttribute="leading" secondItem="ESo-fe-26G" secondAttribute="leading" constant="16" id="LNH-ri-8BO"/>
                 <constraint firstItem="oax-0m-054" firstAttribute="centerY" secondItem="QdH-cw-gzu" secondAttribute="centerY" id="Lv5-Pn-Fxh"/>
                 <constraint firstItem="Ild-pR-mub" firstAttribute="leading" secondItem="ESo-fe-26G" secondAttribute="leading" constant="24" id="Pjd-4w-LCP"/>
-                <constraint firstItem="pM6-pg-RNZ" firstAttribute="top" secondItem="9Yo-Fo-V2l" secondAttribute="bottom" constant="24" id="Tov-cz-gTT"/>
                 <constraint firstAttribute="trailing" secondItem="pM6-pg-RNZ" secondAttribute="trailing" id="XRE-Pk-Y00"/>
-                <constraint firstItem="9Yo-Fo-V2l" firstAttribute="top" secondItem="Ild-pR-mub" secondAttribute="bottom" constant="16" id="hX9-iC-PNn"/>
+                <constraint firstItem="pM6-pg-RNZ" firstAttribute="top" secondItem="UVL-Rp-Sd5" secondAttribute="bottom" constant="24" id="dB3-K4-R1P"/>
                 <constraint firstItem="pCs-b4-kA7" firstAttribute="top" secondItem="ESo-fe-26G" secondAttribute="top" constant="24" id="lxx-WB-5WQ"/>
                 <constraint firstItem="by7-fE-ztG" firstAttribute="top" secondItem="pM6-pg-RNZ" secondAttribute="bottom" constant="16" id="pTs-FJ-oLW"/>
                 <constraint firstItem="QdH-cw-gzu" firstAttribute="leading" secondItem="ESo-fe-26G" secondAttribute="leading" constant="16" id="qgm-gf-py3"/>
                 <constraint firstItem="pCs-b4-kA7" firstAttribute="leading" secondItem="ESo-fe-26G" secondAttribute="leading" constant="24" id="qhK-dB-IUI"/>
+                <constraint firstItem="UVL-Rp-Sd5" firstAttribute="leading" secondItem="bZC-vD-TXY" secondAttribute="leading" constant="24" id="xG7-Hd-XzQ"/>
                 <constraint firstAttribute="trailing" secondItem="Mxb-RI-OS9" secondAttribute="trailing" constant="16" id="xiU-Gg-kmr"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="bZC-vD-TXY"/>
+            <point key="canvasLocation" x="72.799999999999997" y="100.29985007496252"/>
         </view>
     </objects>
     <resources>

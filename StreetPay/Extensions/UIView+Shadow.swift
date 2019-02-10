@@ -12,7 +12,7 @@ extension UIView {
     func addDropShadow(withRadius radius: CGFloat = 6.0, andOffset offset: CGSize = CGSize(width: 0, height: 2)) {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = offset
-        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOpacity = 0.15
         self.layer.shadowRadius = radius
     }
 }
