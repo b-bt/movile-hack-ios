@@ -13,6 +13,8 @@ class ConfirmationViewController: UIViewController {
     @IBOutlet weak var continueBtn: RectangleButton!
     @IBOutlet weak var loadingCard: LoadingCard!
     
+    var transactionValue: Double!
+    
     var isLoading: Bool = true {
         didSet {
             self.loadingCard.isLoading = self.isLoading
@@ -39,7 +41,8 @@ class ConfirmationViewController: UIViewController {
         
         self.continueBtn.delegate = self
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        TransactionsManager.shared.createTransaction(withValue: self.transactionValue) { (transaction) in
+            self.loadingCard.amountLbl.text = transaction.stringValue
             self.isLoading = false
         }
     }

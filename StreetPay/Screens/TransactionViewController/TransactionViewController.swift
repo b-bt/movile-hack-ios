@@ -26,6 +26,12 @@ class TransactionViewController: UIViewController {
         self.transactionCard.valueFld.activate()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? ConfirmationViewController,
+            let value = sender as? Double else { return }
+        vc.transactionValue = value
+    }
+    
     func setupNavbar() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -41,7 +47,7 @@ class TransactionViewController: UIViewController {
 extension TransactionViewController: ValueTextFieldDelegate {
     func filled(value: Double) {
         self.continueButton.isEnabled = true
-        print(value)
+        self.transactionAmount = value
     }
     
     func cleared() {

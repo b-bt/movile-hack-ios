@@ -29,7 +29,7 @@ class TransactionCell: UITableViewCell {
         
         self.vendorImg.image = vendor.photo
         self.vendorNameLbl.text = vendor.name
-        self.transactionAmounLbl.text = String(format: "%.02f", transaction.value)
+        self.transactionAmounLbl.text = transaction.stringValue
     }
 
 }

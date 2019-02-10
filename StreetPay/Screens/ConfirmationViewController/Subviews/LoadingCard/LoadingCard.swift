@@ -19,11 +19,11 @@ class LoadingCard: UIView {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var amountLbl: UILabel!
+    @IBOutlet weak var messageLbl: UILabel!
     
     var isLoading: Bool = true {
         didSet {
             UIView.animate(withDuration: 0.2) {
-                // TODO: animate
                 self.loadingConstraint.isActive = self.isLoading
                 self.allInfoConstraint.isActive = !self.isLoading
                 
@@ -34,8 +34,10 @@ class LoadingCard: UIView {
                 
                 if self.isLoading {
                     self.activityIndicator.startAnimating()
+                    self.messageLbl.text = "Confirmando pagamento..."
                 } else {
                     self.activityIndicator.stopAnimating()
+                    self.messageLbl.text = "Pagamento confirmado!"
                 }
             }
         }

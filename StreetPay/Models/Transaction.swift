@@ -11,6 +11,9 @@ import Foundation
 class Transaction {
     var vendor: Vendor
     var value: Double
+    var stringValue: String {
+        return "R$" + String(format: "%.02f", value)
+    }
     
     init(withVendor vendor: Vendor, andValue value: Double) {
         self.vendor = vendor
